@@ -1,0 +1,7 @@
+{
+  "name": "vitest-environment-example-prisma",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:aiji42/vitest-environment-example-prisma.git",
+  "license": "MIT"
+}
