@@ -4,7 +4,11 @@
   "main": "index.js",
   "repository": "git@github.com:aiji42/vitest-environment-example-prisma.git",
   "license": "MIT",
+  "scripts": {
+    "test": "vitest run"
+  },
   "devDependencies": {
+    "@quramy/jest-prisma": "^1.1.2",
     "prettier": "^2.7.1",
     "prisma": "^4.6.1",
     "typescript": "^4.9.3",
