@@ -4,6 +4,6 @@ export default defineConfig({
   test: {
     globals: true,
     environment: "prisma",
-    setupFiles: ["./vitest.setup.ts"],
+    setupFiles: ["vitest-environment-prisma"],
   },
 });
