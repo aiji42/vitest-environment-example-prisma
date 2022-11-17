@@ -1,0 +1,16 @@
+{
+  "name": "vitest-environment-prisma",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.3"
+  },
+  "peerDependencies": {
+    "@quramy/jest-prisma-core": "*",
+    "vitest": "*"
+  }
+}
