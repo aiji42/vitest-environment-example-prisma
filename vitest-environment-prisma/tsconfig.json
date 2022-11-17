@@ -4,6 +4,7 @@
     "target": "ESNext",
     "moduleResolution": "node",
     "strict": true,
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "declaration": true
   }
 }

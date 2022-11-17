@@ -1,7 +1,16 @@
 {
   "name": "vitest-environment-prisma",
   "version": "1.0.0",
-  "main": "dist/index.mjs",
+  "main": "./dist/environment.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "default": "./dist/environment.mjs"
+    },
+    "./setup": {
+      "default": "./dist/setup.mjs"
+    }
+  },
   "type": "module",
   "license": "MIT",
   "scripts": {
@@ -11,7 +20,9 @@
     "typescript": "^4.9.3"
   },
   "peerDependencies": {
-    "@quramy/jest-prisma-core": "*",
     "vitest": "*"
+  },
+  "dependencies": {
+    "@quramy/jest-prisma-core": "^1.1.2"
   }
 }
