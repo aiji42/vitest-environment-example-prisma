@@ -1,6 +1,6 @@
-describe("User", () => {
-  const prisma = jestPrisma.client;
+const prisma = jestPrisma.client;
 
+describe("User", () => {
   test("Add user", async () => {
     const createdUser = await prisma.user.create({
       data: {
@@ -16,6 +16,7 @@ describe("User", () => {
         },
       })
     ).toStrictEqual(createdUser);
+    expect(await prisma.user.count()).toBe(1);
   });
 
   test("Add users on transaction", async () => {
@@ -50,9 +51,25 @@ describe("User", () => {
         },
       })
     ).toStrictEqual(user2);
+    expect(await prisma.user.count()).toBe(2);
   });
 
   test("Count user", async () => {
     expect(await prisma.user.count()).toBe(0);
+  });
+
+  describe("add User in beforeEach", () => {
+    beforeEach(async () => {
+      await prisma.user.create({
+        data: {
+          nickname: "userX",
+          email: "userX@example.com",
+        },
+      });
+    });
+
+    test("Count user", async () => {
+      expect(await prisma.user.count()).toBe(1);
+    });
   });
 });
